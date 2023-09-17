@@ -9,7 +9,7 @@ codigo = pyotp.TOTP(chave_mestra)
 
 codigo_usuario = input("Digite seu codigo de autenticação. ")
 
-#escaneie o Qr_code para adicionar o codigo
+#escaneie o Qr_code com seu app de autenticação para adicionar o codigo
 print(codigo.verify(codigo_usuario))
 
 link = pyotp.TOTP(chave_mestra).provisioning_uri(name="Rafael", issuer_name="teste de autenticação")
